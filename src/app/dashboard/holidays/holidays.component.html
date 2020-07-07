@@ -59,13 +59,13 @@
                         </td>
                         <td><input type="checkbox" [(ngModel)]="data.closed"
                                 [disabled]="!bankHolidayEnabled.checkHolidayDays"></td>
-                        <td><button type="submit" (click)="Remove(i)" style="border-radius:5px;"
+                        <td><button type="submit" (click)="Remove(i)" class="btn" style="background-color:#b3bbd8"
                                 [disabled]="!bankHolidayEnabled.checkHolidayDays">Remove</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <button class="btn" type="button" style="background-color: #e2542f;color: white;margin-top:15px"
+        <button class="btn" type="button" style="background-color:#ef972a;color: white;margin-top:15px"
             (click)="AddHoliday()" [disabled]="!bankHolidayEnabled.checkHolidayDays">Add Holiday</button>
         <button class="btn" type="submit"
             style="background-color: #e2542f;color: white; margin-left: 10px; margin-top:15px"
