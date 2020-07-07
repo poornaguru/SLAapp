@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">
+    <h1 style="color:white">SLA</h1>
+  </a>
+  <button class="navbar-toggler custom-toggler" style="border-color: #ffc107!important;" type="button"
+    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto order-0">
+      <li class="nav-item active">
+        <div class="mx-auto order-0" *ngIf="isCallFlowSelected()">
+          <a class="navbar-brand mx-auto" style="color:#ffc107;">Selected Call Flow : {{callFlow}}</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <h6 style="font-size:30px;align-items: flex-end;color:white;padding-right: 20px;">Call Flow Dashboard</h6>
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" (click)="logout()"
+        *ngIf="isLoggedIn()">LogOut</button>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+.container-fluid{
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    overflow: hidden !important;
+}
+a {
+  color: #000000b5!important;
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .ipad-portrait { color: red; } /* your css rules for ipad portrait */
+  }
+  @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    .ipad-landscape { color: blue; } /* your css rules for ipad landscape */
+  }
+  .bg-dark{
+background-color: #89b0da!important;
+  }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+ 
+

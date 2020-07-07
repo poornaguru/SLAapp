@@ -1,0 +1,20 @@
+<div style="padding-left:25px;padding-right: 25px;min-height: 80vh;padding-top: 20px;margin-top:10px">
+    <h2 style="text-align: left!important;padding-left: 10px;">User Management:</h2>
+    <div style="padding-top: 10px;">
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr *ngFor="let user of users;let i= index" scope="row">
+                        <td style="width: 25%;font-size: 15px;">User {{user.id}} <strong>{{user.type}}</strong></td>
+                        <td style="width: 5%;"><i class="fa fa-times-circle"
+                                style="border-radius:50%;color:rgb(250, 10, 10);font-size:1.15em !important;"
+                                aria-hidden="true"></i></td>
+                        <td><i class="fa fa-arrow-circle-right"
+                                style="border-radius:50%;color:rgb(6, 243, 6);font-size:1.15em !important;"
+                                aria-hidden="true"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

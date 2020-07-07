@@ -1,0 +1,14 @@
+<div style="padding-left:14px;padding-right: 25px;margin-bottom:35px;padding-top: 20px;min-height: 80vh;">
+    <h2 style="text-align:justify;margin:10px;padding-left:7px">Call Flows</h2>
+    <div class="container" style="padding-left: 1px;">
+        <div class="row" *ngFor="let callFlow of displayedCallFlow" style="padding-top:15px;padding-left:20px;">
+            <div class="col-4">
+                <h6>{{callFlow.callFlowName}}</h6>
+            </div>
+            <div class="col-8">
+                <a href="javascript:void(0)" (click)="selectedCallFlow(callFlow)" style="color:red">Select Call Flow</a>
+                <span *ngIf="callFlow.disabled" style="padding-left:10px;">(Current Call Flow)</span>
+            </div>
+        </div>
+    </div>
+</div>

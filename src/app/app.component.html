@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row min-vh-80 flex-column flex-md-row">
+        <aside class="col-12 col-md-2 p-0 bg-dark flex-shrink-1" *ngIf="isLoggedIn()">
+            <nav class="navbar navbar-expand navbar-light bg-dark flex-md-column flex-row align-items-start py-2">
+                <div class="collapse navbar-collapse">
+                    <ul class="flex-md-column flex-row nav w-100 justify-content-between">
+                        <li class="nav-item" *ngIf="isAdminUser()">
+                            <a class="nav-link pl-0 text-nowrap" [routerLink]="['dashboard/usermanagement']"><i
+                                    class="fa fa-user codeply fa-fw"></i> <span class="font-weight-bold">User
+                                    Management</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" [routerLink]="['dashboard/callflow']"><i
+                                    class="fa fa-book fa-fw"></i> <span>CallFlow</span></a>
+                        </li>
+                        <li class="nav-item" [class.disabled]="isCallFlowSelected()">
+                            <a class="nav-link pl-0" [routerLink]="['dashboard/openingtimes']"><i
+                                    class="fa fa-cog fa-fw"></i> <span class="font-weight-bold">Opening Times</span></a>
+                        </li>
+                        <li class="nav-item" [class.disabled]="isCallFlowSelected()">
+                            <a class="nav-link pl-0" [routerLink]="['dashboard/message']"><i
+                                    class="fa fa-envelope fa-fw"></i> <span>Message of the Day</span></a>
+                        </li>
+                        <li class="nav-item" [class.disabled]="isCallFlowSelected()">
+                            <a class="nav-link pl-0" [routerLink]="['dashboard/outofhours']"><i
+                                    class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span
+                                    class="font-weight-bold">Out of Hours</span></a>
+                        </li>
+                        <li class="nav-item" [class.disabled]="isCallFlowSelected()">
+                            <a class="nav-link pl-0" [routerLink]="['dashboard/holidays']"><i
+                                    class="fa fa-heart fa-fw"></i> <span>Holidays</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <main class="col bg-faded  flex-grow-1">
+
+            <router-outlet></router-outlet>
+            <toaster-container [toasterconfig]="config"></toaster-container>
+        </main>
+    </div>
+</div>

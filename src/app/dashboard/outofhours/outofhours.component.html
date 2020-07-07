@@ -1,0 +1,68 @@
+<form [formGroup]="courseForm">
+    <div style="padding-left:25px;padding-right: 25px;min-height: 80vh;padding-top: 20px;margin-bottom:35px">
+        <div style="margin-top:10px">
+            <h2>Please enter your out of hours option below:</h2>
+        </div>
+        <div class="container" style="margin-top: 15px;padding-left: 1px;padding-top:10px">
+            <div class="row">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Do you want to play a message?
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8">
+                    <input type="radio" [value]="true" formControlName="isOutofhoursmessageEnabled">Yes
+                    <input type="radio" [value]="false" formControlName="isOutofhoursmessageEnabled">No
+                </div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Do you want to divert the call (e.g voicemail)?
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8">
+                    <input type="radio" [value]="true" formControlName="isOutofhoursCallEnabled">Yes
+                    <input type="radio" [value]="false" formControlName="isOutofhoursCallEnabled">No
+                </div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Number to divert to:
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8 col-lg-offset-2" style="font-size: 15px;padding-top:1px">
+                    <input type="text" formControlName="enabledoutofhoursMessageNumber">
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:20px">
+            <h2>Please enter your holiday options below:</h2>
+        </div>
+        <div class="container" style="margin-top: 15px;padding-left: 1px;padding-top:10px">
+            <div class="row">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Do you want to play a message?
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8">
+                    <input type="radio" [value]="true" formControlName="isHolidayMessageEnabled">Yes
+                    <input type="radio" [value]="false" formControlName="isHolidayMessageEnabled">No
+                </div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Do you want to divert the call (e.g voicemail)?
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8">
+                    <input type="radio" [value]="true" formControlName="isHolidayCallEnabled">Yes
+                    <input type="radio" [value]="false" formControlName="isHolidayCallEnabled">No
+                </div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-sm-8 col-md-8 col-lg-4">
+                    Number to divert to:
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-8 col-lg-offset-2" style="font-size: 15px;padding-top:1px">
+                    <input type="text" formControlName="enabledHolidaysMessageNumber">
+                </div>
+            </div>
+        </div>
+        <button class="btn" type="button" style="background-color: #e2542f;color: white;margin-top:15px"
+            (click)="onSubmit()">Save</button>
+    </div>
+</form>

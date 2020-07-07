@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~angular2-toaster/toaster.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toast-top-left {
+    top: 15% !important;
+}
+.toast-success {
+    background-color: #64fa7d !important;
+    color:rgb(71, 68, 68)!important;
+}  
+.toast-error {
+    background-color: #bd362f !important;
+    color:rgb(71, 68, 68)!important;
+} 
+.toast-info {
+    background-color: #2f96b4 !important;
+}  
+.toast-wait {
+    background-color: #2f96b4 !important;
+}  
+.toast-warning {
+    background-color: #f89406 !important;
+}  
+#toast-container > div {
+    opacity: 0.9 !important;
+    box-shadow: 0 0 4px white !important;
+} 
